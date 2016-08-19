@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Detail Admin</title>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <style>body{min-width: 660px}</style>
+
+<body>
+
+    <!-- navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <button type="button" class="btn btn-navbar visible-phone" id="menu-toggler">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+            <a class="brand" href="#"><img src="img/logo.png" /></a>
+
+            <ul class="nav pull-right">                
+                <li class="hidden-phone">
+                    <input class="search" type="text" />
+                </li>
+                <li class="notification-dropdown hidden-phone">
+                    
+                </li>
+                <li class="notification-dropdown hidden-phone">
+                    <a href="#" class="trigger">
+                        <i class="icon-envelope-alt"></i>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle hidden-phone" data-toggle="dropdown">
+                        Your account
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Personal info</a></li>
+                        <li><a href="#">Account settings</a></li>
+                        <li><a href="#">Billing</a></li>
+                        <li><a href="#">Export your data</a></li>
+                        <li><a href="#">Send feedback</a></li>
+                    </ul>
+                </li>
+                <li class="settings hidden-phone">
+                    <a href="#" role="button">
+                        <i class="icon-cog"></i>
+                    </a>
+                </li>
+                <li class="settings hidden-phone">
+                    <a href="#" role="button">
+                        <i class="icon-share-alt"></i>
+                    </a>
+                </li>
+            </ul>            
+        </div>
+    </div>
+    <!-- end navbar -->
+
+    <!-- 左側 -->
+    <div id="sidebar-nav">
+        <ul id="dashboard-menu">
+            <li class="active">
+                <div class="pointer">
+                    <div class="arrow"></div>
+                    <div class="arrow_border"></div>
+                </div>
+                <a data-type="tuijian" href="javascript:;">
+                    <i class="icon-home"></i>
+                    <span>推荐</span>
+                </a>
+            </li>            
+            <li>
+                <a  data-type="baijia" href="javascript:;">
+                    <i class="icon-signal"></i>
+                    <span>百家</span>
+                </a>
+            </li>
+            <li>
+                <a data-type="bendi" class="dropdown-toggle" href="javascript:;">
+                    <i class="icon-group"></i>
+                    <span>本地</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+            </li>
+            <li>
+                <a data-type="tupian" class="dropdown-toggle" href="javascript:;">
+                    <i class="icon-edit"></i>
+                    <span>图片</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+            </li>
+            <li>
+                <a  data-type="yule" href="javascript:;">
+                    <i class="icon-picture"></i>
+                    <span>娱乐</span>
+                </a>
+            </li>
+            <li>
+                <a  data-type="shehui" href="javascript:;">
+                    <i class="icon-calendar-empty"></i>
+                    <span>社会</span>
+                </a>
+            </li>
+            <li>
+                <a data-type="junshi" href="javascript:;">
+                    <i class="icon-th-large"></i>
+                    <span>军事</span>
+                </a>
+            </li>
+            <li>
+                <a data-type="nvren" class="dropdown-toggle ui-elements" href="javascript:;">
+                    <i class="icon-code-fork"></i>
+                    <span>女人</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+            </li>
+            <li>
+                <a data-type="gaoxiao" href="javascript:;">
+                    <i class="icon-cog"></i>
+                    <span>搞笑</span>
+                </a>
+            </li>
+            <li>
+                <a data-type="keji" class="dropdown-toggle" href="javascript:;">
+                    <i class="icon-share-alt"></i>
+                    <span>科技</span>
+                    <i class="icon-chevron-down"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--End 左側 -->
+
+
+	<!-- main container -->
+    <div class="content">
+
+        <div class="container-fluid">
+            <div class="head">
+                <h4 class="btn addData" style="margin-bottom: 30px">数据添加+</h4>
+            </div>
+            <div class="pop">
+                <div class="popCtn">
+                    <div class="tableTitle">
+                        <h4>
+                            <span style="font-weight: bold">数据+</span>
+                            <span class="popClose" style="float: right;cursor: pointer">X</span>
+                        </h4>
+                    </div>
+                    <div class="inputKuang ofh">
+                        <p>新闻标题<input class="newstitle" type="text"/></p>
+                        <!-- <p>新闻栏目<input class="newstab" type="text"/></p> -->
+                        <p>新闻栏目<select>
+                            <option value="0">请选择栏目</option>
+                            <option value="tuijian">推荐</option>
+                            <option value="baijia">百家</option>
+                            <option value="bendi">本地</option>
+                            <option value="tupian">图片</option>
+                            <option value="yule">娱乐</option>
+                            <option value="shehui">社会</option>
+                            <option value="junshi">军事</option>
+                            <option value="nvren">女人</option>
+                            <option value="gaoxiao">搞笑</option>
+                            <option value="keji">科技</option>
+                        </select>
+                        </p>
+                        <p>新闻图片<input class="newsimg" type="text"/></p>
+                        <p>新闻时间<input class="newstime" type="date"/></p>
+                        <p>新闻标示<input class="newssign" type="text"/></p>
+                        <p>
+                            <button class="do">确定</button>
+                            <button class="cancel">取消</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <div class="tCtn">
+
+                    <!-- 表头部-->
+                    <div class="row tHeader">
+                        <div class="fl newsNo">
+                            ID
+                        </div>
+                        <div class="fl newsTitle">
+                            新闻标题
+                        </div>
+                        <div class="fl newsTab">
+                            新闻栏目
+                        </div>
+                        <div class="fl newsImg">
+                            新闻图片
+                        </div>
+                        <div class="fl newsTime">
+                            新闻时间
+                        </div>
+                        <div class="fl newsSign">
+                            新闻标示
+                        </div>
+
+                    </div>
+                    <!-- End表头部-->
+                    <!-- 表体 -->
+                    <div class="tBody"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-latest.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+define(function(s,o,e){var i={};i.aside_hover=function(){var s=$("#lesson_list_ul li"),o=$(".lesson_list_detail");s.on("mouseover",function(s){$(this).addClass("lesson_list_over"),$(this).find(".lesson_list_detail").show()}),s.on("mouseout",function(s){$(this).removeClass("lesson_list_over"),o.hide()})},e.exports=i});

@@ -1,0 +1,23 @@
+#setting_down div,
+#setting_down i{
+	font-size: 0px;
+}
+#setting_down div{
+	top: -12px;
+}
+#setting_down i{
+	top: -11px;
+}
+
+.code_text p,
+.code_text b{margin: 5px 0;}
+
+#footer .first_p,
+#footer .last_p{margin: 12px 0;}
+
+.search_btn{margin-left: -5px;}
+.search_btn input{
+	height: 39px;
+	margin-top: -1px;
+	border: 0;
+}

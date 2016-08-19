@@ -1,0 +1,5 @@
+***晚上申请通关然后没人通过，结果任务超时了.....重新提交作业T_T
+app文件夹为原文件，temp为临时文件，build为最终处理完的文件
+项目中：
+   1.  .user_need下的三张小图作了雪碧图合并处理(发现gulp-css-spriter只对position重新定位，并没有对有background-size作处理，所以有background-size属性的作雪碧图处理后会乱掉)
+   2.  less编译，对所有图片，css文件作了加MD5戳处理，压缩处理

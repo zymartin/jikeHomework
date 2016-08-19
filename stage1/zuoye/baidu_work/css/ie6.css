@@ -1,0 +1,76 @@
+.center{text-align: center;}
+#bb_container{text-align: center;}
+#big_container{width: 1000px;height: 600px;}
+#nav .tab_a{
+	float: left;
+	margin-left: 20px;
+	padding-top: 5px;
+}
+.pro_item_1,
+.pro_item_yy,
+.pro_item_tp,
+.pro_item_zd,
+.pro_item_wk,
+.pro_item_fy,
+.pro_item_tg,
+.pro_item_all{
+	text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    color: #666;
+    font-size: 12px;
+    width: 66px;
+    height: 76px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.pro_item_1 {
+    margin-top: 24px;
+    font-size: 13px;
+    height: 30px;
+}
+.pro_item_1 span,
+.pro_item_yy span,
+.pro_item_tp span,
+.pro_item_zd span,
+.pro_item_wk span,
+.pro_item_fy span,
+.pro_item_tg span{
+	display: block;
+    width: 36px;
+    height: 36px;
+    margin: 10px auto 5px;
+    background-image: url(../img/sprint.png);
+    background-repeat: no-repeat;
+}
+#setting_down div,
+#setting_down i{
+	font-size: 0px;
+	border-right: 5px solid white;
+	border-left: 5px solid white;
+	border-bottom: 5px solid #d1d1d1;
+	border-top: 1px solid white;
+}
+.search_btn{margin-left: -5px;}
+.search_btn input{
+	height: 39px;
+	margin-top: -1px;
+	border: 0;
+}
+.phone_codeimg,
+.nuomi_codeimg{
+	width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+}
+
+#footer{position: relative;margin-top: 275px;}
+.code_text p,
+.code_text b{margin: 5px 0;}
+
+#footer .first_p,
+#footer .last_p{margin: 12px 0;}
+
+.first_p{text-align: left;}
+.first_p a{margin-right: 20px;}
+.last_p,.last_p a{color: #666;}

@@ -1,0 +1,254 @@
+*{padding: 0;margin: 0;
+	font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+	box-sizing: border-box;}
+	body{background: #f5f5f5;color: rgb(102,102,102);}
+	li{list-style: none;}
+	.slider{height: 182px;}
+	@media screen and (max-width: 320px) {
+		.slider{height: 156px;}
+	}
+
+	/*Search*/
+	#search{
+		padding: 0 10px;
+		width: 100%;
+		height: 40px;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	.logo,
+	#search form,
+	.login{
+		display: inline-block;
+		line-height: 26px;
+	}
+	.logo{
+		background-image: url(../img/jd-sprites.png);
+		background-repeat: no-repeat;
+		background-size: 200px 200px;
+	    width: 56px;
+	    height: 21px;
+	    background-position: 0 -109px;
+	    position: relative;
+	    top: 8px;
+	}
+	#search input{
+		border-radius: 26px;
+		outline: none;
+		text-indent: 10px;
+	}
+	#search form{
+		width: 68%;
+		position: relative;
+		top: 3px;
+	}
+	#search input{
+		width: 100%;
+		height: 30px;
+		border: none;
+	}
+	.login{
+		font-size: 15px;
+    	color: #fff;
+    	position: absolute;
+    	right: 10px;
+    	top: 0;
+    	line-height: 38px;
+	}
+	/*End search*/
+	.floor{
+		background: #fff;
+    	margin-bottom: 12px;
+    	box-shadow: 0 1px 1px #dcdcdc;
+    	overflow: hidden;
+	}
+	.slider img{width: 100%;}
+	/*Header*/
+	.header{overflow: hidden;background: white;margin-bottom: 8px;}
+	.nav{
+		margin-top: 11px;
+  		padding: 0 3.125%;
+  	}
+  	.nav a{
+  		float: left;
+  		width: 25%;
+  		text-align: center;
+  		padding-bottom: 11px;
+  		display: inline-block;
+		text-decoration: none;
+  	}
+  	.nav a img{
+  		width: 40px;
+  		height: 40px;
+  		display: block;
+  		margin: 0 auto 6px auto;
+  	}
+  	.nav a span{
+  		font-size: 12px;
+  		color: rgb(102,102,102);
+  	}
+  	/*秒杀*/
+  	.seckill-icon {
+	    margin-left: 4px;
+	    margin-top: 4px;
+	    width: 16px;
+	    height: 20px;
+	    background: url(../img/seckill-icon.png) 0 0 no-repeat;
+	    background-size: 16px 20px;
+	}
+	.title{overflow: hidden;}
+	.title span{float: left;line-height: 15px;}
+	.title span:last-child{
+		float: right;
+		margin: 8px 1px 2px 1px;
+	}
+	.title span:nth-child(2){
+    	font-size: 15px;
+    	color: #c91523;
+    	margin: 8px 3px 2px 4px;
+    	padding-bottom: 7px;
+	}
+	.time_block{
+		width: 15px;
+		height: 15px;
+		margin: 8px 1px 2px 1px;
+		background: #5d5d5d;
+		color: #fff;
+		text-align: center;
+	}
+	.maohao{
+		margin: 8px 2px 0px 2px;
+		height: 15px;
+	}
+	.seckill-item{
+		float: left;
+		width: 33.3%;
+	}
+	.seckill-item div{
+		width: 100%;
+		padding: 0 18%;
+	}
+	.seckill-item img{
+		width: 100%;
+	}
+	.seckill-item p{text-align: center;color: red}
+	.seckill-item p:last-child{
+		text-decoration: line-through;
+		color: rgb(102,102,102);
+		margin-bottom:12px;
+	}
+	.viewport{padding: 0 5px;}
+	.viewport_content{padding-top: 7px;}
+	h2:before{
+		content: "";
+		width: 3px;
+		height: 12px;
+		background: #d8505c;
+		float: left;
+		margin: 1px 7px 0 0;
+	}
+	h2{
+		display: inline-block;
+		font-size: 15px;
+		padding-bottom: 7px;
+		color: #7f7f7f;
+		line-height: 15px;
+		margin: 8px 0 2px 7px;
+		font-weight:normal;
+	}
+	/*End 秒杀*/
+	.discount a{font-size: 0; width:50%;}
+	.discount a:first-child{
+		float: left;
+		border-right:1px solid white;
+	}
+	.discount a:nth-child(2),
+	.discount a:last-child{
+		float: right;
+	}
+	.discount a:last-child{
+		border-top: 1px solid white;
+		margin-top: -2px;
+	}
+	.discount img{width:100%;}
+	.activity{
+		padding: 5px;
+		display: block;
+		border-top: 1px solid #ccc;
+	}
+	.activity img{width: 100%;}
+	
+	/*footer*/
+	.footer{text-align: center;}
+	.footer_lineup{height: 0;border-top: 1px solid #bfbfbf}
+	.footer_link{
+	    width: 320px;
+	    margin: 0 auto;
+	    display: table;
+	    height: 13px;
+	    padding: 18px 0;
+	}
+	.footer_link li{
+		display: table-cell;
+	    width: 69px;
+	    height: 13px;
+	    line-height: 13px;
+	    font-size: 13px;
+	}
+	.footer_link li a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		color: #848689;
+	}
+	.footer_link li{border-right: 1px solid #d7d7d7;}
+	.footer_link li:last-child{border: none;}
+
+	.footer_platform{
+		height: 69px;
+	    width: 320px;
+	    margin: 0 auto;
+	    display: table;
+	    margin-bottom: 8px;
+	}
+	.footer_platform a{
+		display: block;
+	    width: 45px;
+	    margin: 0 auto;
+	    font-size: 12px;
+	    color: #848689;
+	    text-decoration: none;
+	    position: relative;
+	}
+	.footer_platform li{display:table-cell;}
+	.footer_platform li a:before{
+		content: "";
+		background-image: url(../img/jd-sprites.png);
+	    display: block;
+	    height: 38px;
+	    width: 33px;
+	    margin: 9px auto 0;
+	    background-size: 200px 200px;
+	    background-position: 0 -70px;
+	    opacity: .6;
+		background-repeat:no-repeat;
+	}
+	.footer_platform li:first-child a:before{
+		background-position: -120px -70px;
+	}
+	.footer_platform li:nth-child(2){
+		background-position: -40px -70px;
+	}
+	.footer_platform li:last-child{
+		background-position: -80px -70px;
+	}
+	.copyright{
+		height: 44px;
+	    line-height: 44px;
+	    text-align: center;
+	    color: #848689;
+	    font-size: 12px;
+	}
+	/*End footer*/

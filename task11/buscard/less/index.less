@@ -1,0 +1,155 @@
+@borderCol: #999;
+@h-backgroundCol:#e43937;
+@r-backgroundCol:#379C30;
+@s-backgroundCol:#f1f1f1;
+.border-radius(@r:3px) {
+  -webkit-border-radius: @r;
+  -moz-border-radius: @r;
+  border-radius: @r;
+}
+.div-center(@top:0,@bottom:0){
+  margin: @top auto @bottom auto;
+}
+.lineCenter(@h:18px){
+  height: @h;line-height: @h;
+}
+
+body {
+  font-family: "Microsoft YaHei", "微软雅黑";
+  padding-left: 10px;
+}
+*{margin: 0;padding: 0;}
+.fl{float: left;}
+.cf:after{
+  content: "";
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+li{
+  list-style: none;
+}
+
+.cardBorder {
+  .div-center();
+  width: 400px;
+  border: 2px solid @borderCol;
+  .cardHeader {
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    div {
+      background-color: @h-backgroundCol;
+      width: 288px;
+      .lineCenter(50px);
+      .div-center(0,0);
+      .border-radius(5px);
+    }
+    i {
+      .div-center(-1px,0);
+      display: block;
+      width: 0;
+      height: 0;
+      border:10px solid transparent;
+      border-top: 10px solid @h-backgroundCol;
+    }
+  }
+}
+.routeServer{
+  font-size: 10px;
+  background-color: @s-backgroundCol;
+  margin-bottom: 30px;
+  .num{
+    text-align: center;
+    width: 115px;
+  }
+  .num p:first-child{
+    font-size: 30px;
+    .lineCenter(40px);
+    background-color: @h-backgroundCol;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .num p:last-child{
+    height: 20px;
+  }
+  .detail{
+    .lineCenter(70px);
+    width: 285px;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+//路线部分
+.route{
+  background-color: @r-backgroundCol;
+  color: #fff;
+  margin-bottom: 18px;
+  .addr{
+    .fl;
+    text-align: center;
+    overflow: hidden;
+    font-size: 13px;
+    width: 13px;
+    height: 85px;
+    padding-left: 14px;
+  }
+}
+//匹配的类的规则
+.addr.n2{
+  li:first-child{margin-bottom: 46px}
+}
+.addr.n3{
+  li{
+    margin-bottom: 13px;
+  }
+  li:nth-child(2){margin-bottom: 16px;}
+}
+.addr.n4{
+  li{
+    margin-bottom: 4px;
+  }
+}
+.addr.n5{
+  line-height: 16px;
+  li:first-child{
+    margin-top: 1px;
+  }
+  li:last-child{
+    margin-top: -1px;
+  }
+}
+.addr.n6{
+  line-height: 13px;
+  li:first-child{
+    margin-top: 2px;
+  }
+  li:nth-child(5),li:nth-child(6){
+    margin-top: -1px;
+  }
+}
+//底部
+.rsfooter{
+  position: relative;
+  top: -5px;
+  .tip{
+    text-align: center;
+  }
+  .line{
+    border-top:2px solid @h-backgroundCol;
+    width: 280px;
+    .div-center();
+  }
+  .arrow{
+    position: relative;
+  }
+  i {
+    border-top: 12px solid transparent;
+    border-left: 60px solid @h-backgroundCol;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    right: 45px;
+  }
+}

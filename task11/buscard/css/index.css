@@ -1,0 +1,144 @@
+body {
+  font-family: "Microsoft YaHei", "微软雅黑";
+  padding-left: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.fl {
+  float: left;
+}
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+  zoom: 1;
+}
+li {
+  list-style: none;
+}
+.cardBorder {
+  margin: 0 auto 0 auto;
+  width: 400px;
+  border: 2px solid #999999;
+}
+.cardBorder .cardHeader {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+.cardBorder .cardHeader div {
+  background-color: #e43937;
+  width: 288px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto 0 auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.cardBorder .cardHeader i {
+  margin: -1px auto 0 auto;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top: 10px solid #e43937;
+}
+.routeServer {
+  font-size: 10px;
+  background-color: #f1f1f1;
+  margin-bottom: 30px;
+}
+.routeServer .num {
+  text-align: center;
+  width: 115px;
+}
+.routeServer .num p:first-child {
+  font-size: 30px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #e43937;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.routeServer .num p:last-child {
+  height: 20px;
+}
+.routeServer .detail {
+  height: 70px;
+  line-height: 70px;
+  width: 285px;
+  font-size: 20px;
+  text-align: center;
+}
+.route {
+  background-color: #379c30;
+  color: #fff;
+  margin-bottom: 18px;
+}
+.route .addr {
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  font-size: 13px;
+  width: 13px;
+  height: 85px;
+  padding-left: 14px;
+}
+.addr.n2 li:first-child {
+  margin-bottom: 46px;
+}
+.addr.n3 li {
+  margin-bottom: 13px;
+}
+.addr.n3 li:nth-child(2) {
+  margin-bottom: 16px;
+}
+.addr.n4 li {
+  margin-bottom: 4px;
+}
+.addr.n5 {
+  line-height: 16px;
+}
+.addr.n5 li:first-child {
+  margin-top: 1px;
+}
+.addr.n5 li:last-child {
+  margin-top: -1px;
+}
+.addr.n6 {
+  line-height: 13px;
+}
+.addr.n6 li:first-child {
+  margin-top: 2px;
+}
+.addr.n6 li:nth-child(5),
+.addr.n6 li:nth-child(6) {
+  margin-top: -1px;
+}
+.rsfooter {
+  position: relative;
+  top: -5px;
+}
+.rsfooter .tip {
+  text-align: center;
+}
+.rsfooter .line {
+  border-top: 2px solid #e43937;
+  width: 280px;
+  margin: 0 auto 0 auto;
+}
+.rsfooter .arrow {
+  position: relative;
+}
+.rsfooter i {
+  border-top: 12px solid transparent;
+  border-left: 60px solid #e43937;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -10px;
+  right: 45px;
+}

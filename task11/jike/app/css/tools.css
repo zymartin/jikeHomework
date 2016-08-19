@@ -1,0 +1,71 @@
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, sans-serif;
+}
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #333;
+}
+li {
+  list-style: none;
+}
+.cf {
+  content: ' ';
+  display: table;
+  clear: both;
+  zoom: 1;
+}
+.wrap:after {
+  content: ' ';
+  display: table;
+  clear: both;
+  zoom: 1;
+}
+.w-1000 {
+  width: 1000px;
+  margin: 0 auto;
+}
+#hot_lessonbox {
+  margin-top: 20px;
+}
+.ofhidden {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.mar-t10 {
+  margin-top: 10px;
+}
+.mar-t20 {
+  margin-top: 20px;
+}
+.mar-t30 {
+  margin-top: 30px;
+}
+.over {
+  height: 100%;
+  width: 100%;
+}
+.color_r {
+  color: red;
+}
+.posfix {
+  position: fixed;
+}
+.curpointer {
+  cursor: pointer;
+}

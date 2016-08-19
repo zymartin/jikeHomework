@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	姓名：<input id="name" name='name' type="text" />
+	分数：<input id="score" name="score" type="text" />
+	<button id="btn">save</button>
+	<table border="1">
+		<thead>
+			<th>名字</th>
+			<th>分数</th>
+			<th>等级</th>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script type="text/javascript" src="jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		
+		btn.onclick = function(){
+			var name = eval(document.getElementById('name')).value;
+			var score = eval(document.getElementById('score')).value;
+			var level = '';
+			var htmlstr = '';
+			level = checkLv(score);
+			htmlstr +='<tr>'+
+						'<td>'+name+'</td>'+
+						'<td>'+score+'</td>'+
+						'<td>'+level+'</td>'+
+					'</tr>'
+					console.log(htmlstr);
+			var tbody = document.getElementsByTagName('tbody')[0];
+			$(tbody).append(htmlstr);
+		}
+
+		function checkLv(score){
+			if(score >= 90){
+				level = '一等生';
+				return level;
+			}else if(score >=80){
+				level = '二等生';
+				return level;
+			}else if(score >=70){
+				level = '三等生';
+				return level;
+			}else if(score >=60){
+				level = '四等生';
+				return level;
+			}else{return '不及格'}
+		}
+
+	</script>
+</body>
+</html>

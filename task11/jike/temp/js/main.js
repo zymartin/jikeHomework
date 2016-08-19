@@ -1,0 +1,1 @@
+define(function(e,i,n){e("jquery");e.async("swiper",function(e){e.swiper("swiper_animate",1,300,!0,2e3,!0,"#pagination"),e.swiper("swiper1",6,300),e.swiper("swiper2",7,300),e.swiper("swiper4",6,300),e.swiper("swiper3",3,500)}),e.async("aside_hover",function(e){e.aside_hover()}),e.async("hover",function(e){e.hover()}),e.async("tabtoggle",function(e){e.tabToggle()})});

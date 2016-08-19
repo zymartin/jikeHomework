@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/jd.css">
+</head>
+<body>
+
+<!-- 搜索栏 -->
+	<div id="search">
+		<div class="logo"></div>
+		<form>
+			<input id="index_search"/>
+		</form>
+		<div class="login">登录</div>
+	</div>
+<!-- End 搜索栏 -->
+<!-- 整体 -->
+	<div id="wrapper">
+		<!-- header -->
+		<div class="header">
+			<div class="slider">
+				<img src="img/1.jpg">
+			</div>
+			<div class="nav">
+				<a href=""><img src="img/a1.png"><span>分类查询</span></a>
+				<a href=""><img src="img/a2.png"><span>物流查询</span></a>
+				<a href=""><img src="img/a3.png"><span>购物车</span></a>
+				<a href=""><img src="img/a4.png"><span>我的京东</span></a>
+				<a href=""><img src="img/a5.png"><span>充值</span></a>
+				<a href=""><img src="img/a6.png"><span>领券中心</span></a>
+				<a href=""><img src="img/a7.png"><span>京东超市</span></a>
+				<a href=""><img src="img/a8.png"><span>我的关注</span></a>
+			</div>
+		</div>
+		<!-- End header -->
+		<!-- 产品视图 -->
+		<div class="viewport">
+
+			<div class="floor seckill">
+				<div class="title">
+					<span class="seckill-icon"></span>
+					<span>掌上秒杀</span>
+					<span class="time_block">0</span>
+					<span class="time_block">0</span>
+					<span class="maohao">:</span>
+					<span class="time_block">0</span>
+					<span class="time_block">0</span>
+					<span class="maohao">:</span>
+					<span class="time_block">0</span>
+					<span class="time_block">0</span>
+					<span class="more">更多></span>
+				</div>
+				<ul class="viewport_content">
+					<li class="seckill-item">
+						<a href="#">
+							<div>
+								<img src="img/prod1.jpg">
+							</div>
+						</a>
+						<p>￥9.90</p>
+						<p>￥21.30</p>
+					</li>
+					<li class="seckill-item">
+						<a href="#">
+							<div>
+								<img src="img/prod2.jpg">
+							</div>
+						</a>
+						<p>￥9.90</p>
+						<p>￥21.30</p>
+					</li>
+					<li class="seckill-item">
+						<a href="#">
+							<div>
+								<img src="img/prod3.jpg">
+							</div>
+						</a>
+						<p>￥9.90</p>
+						<p>￥21.30</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="floor discount-floor">
+				<h2>“京”喜圣诞</h2>
+				
+				<div class='discount'>
+					<a href="#"><img src="img/dis1.jpg" /></a>
+					<a href="#"><img src="img/dis2.jpg" /></a>
+					<a href="#"><img src="img/dis3.jpg" /></a>
+				</div>
+			</div>
+
+			<div class="floor hot-floor">
+				<h2>月黑风高夜</h2>
+				
+				<a class='activity'>
+					<img src="img/hei.jpg" />
+				</a>
+			</div>
+
+		</div>
+		<!-- End 产品视图 -->
+	</div>
+	<!-- End 整体 -->
+	<!-- footer -->
+	<div class="footer">
+		<ul class="footer_link">
+			<li>登录</li>
+			<li>注册</li>
+			<li>反馈</li>
+			<li>回到顶部</li>
+		</ul>
+		<div class="footer_lineup"></div>
+		<ul class="footer_platform">
+			<li><a href="#">客户端</a></li>
+			<li><a href="#">触屏版</a></li>
+			<li><a href="#">电脑版</a></li>
+		</ul>
+		<div class="footer_lineup"></div>
+		<div class="copyright">Copyright © 2012-2015 京东JD.com 版权所有</div>
+
+	</div>
+	<!-- End footer -->
+	<script type="text/javascript">
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop || document.body.scrollTop;
+		var search = document.getElementById('search');
+		if( t >100 ) {
+			search.style.background = "#cf3642";
+		} else {
+			search.style.background = "transparent";
+		}
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.11.3.js"></script>
+	<style type="text/css">
+	.item_container{
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		height: 50px;
+		background-color: #f07;
+	}
+	.item_container ul{
+		height: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.item_container li{
+		list-style: none;
+		float: left;
+		height: 50px;
+		line-height: 50px;
+	}
+	.item_container span{
+		display: block;
+		width: 30px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+		position: absolute;
+		top: 50%;
+		margin-top: -25px;
+	}
+	.btn_left{
+		left: 0;
+	}
+	.btn_right{
+		right: 0;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="item_container">
+			<ul>
+				<li>星期1</li>
+				<li>星期2</li>
+				<li>星期3</li>
+				<li>星期4</li>
+				<li>星期5</li>
+				<li>星期6</li>
+				<li>星期7</li>
+			</ul>
+			<span class="btn_left">k</span>
+			<span class="btn_right">L</span>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var singleW = $(window).width()/4;
+	var index = 0;
+		$('.item_container ul').width(singleW*7);
+		$('.item_container li').width(singleW);
+
+		$('.btn_left').click(function(){
+			index++;
+			if(index < 1){
+				$('.item_container ul').animate({'left':singleW*index},300);
+			}else if(index == 1){
+				index = 0;
+			}
+		});
+		$('.btn_right').click(function(){
+			index--;
+			if(index>-4){
+				$('.item_container ul').animate({'left':singleW*index},300);
+			}else if(index == -4){
+				index = -3;
+			}
+		})
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>课程表</title>
+	<style type="text/css">
+	table{
+		text-align: center;
+	}
+	.math{
+		background: lightblue;
+	}
+	.chinese{
+		background: lightgreen;
+	}
+	.pe{
+		background: orange;
+	}
+	.art{
+		background: #fcc;
+	}
+	caption{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	</style>
+</head>
+<body>
+	<table border="1" cellspacing="0" align="center" summary="Homework Table">
+		<caption>课程表</caption>
+		<!-- Start thead -->
+		<thead>
+			<th colspan="2"></th>
+			<th>星期一</th>
+			<th>星期二</th>
+			<th>星期三</th>
+			<th>星期四</th>
+			<th>星期五</th>
+			<th>星期六</th>
+			<th>星期七</th>
+		</thead>
+		<!-- End thead -->
+
+		<!-- Start tbody -->
+		<tbody>
+			<!-- 第一课时 -->
+			<tr>
+				<td rowspan="4">上午</td>
+				<td>1</td>
+				<td class="math">数学</td>
+				<td class="chinese">语文</td>
+				<td class="pe">体育</td>
+				<td class="chinese">语文</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+				<td rowspan="8">休息</td>
+			</tr>
+			<!-- 第二课时 -->
+			<tr>
+				<td>2</td>
+				<td class="art">美术</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+				<td class="art">美术</td>
+				<td class="art">美术</td>
+				<td class="art">美术</td>
+			</tr>
+			<!-- 第三课时 -->
+			<tr>
+				<td>3</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+				<td class="pe" rowspan="2">体育</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+			</tr>
+			<!-- 第四课时 -->
+			<tr>
+				<td>4</td>
+				<td class="chinese">语文</td>
+				<td class="chinese">语文</td>
+				<td class="chinese">语文</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+			</tr>
+			<!-- 第五课时 -->
+			<tr>
+				<td rowspan="4">下午</td>
+				<td>5</td>
+				<td class="pe">体育</td>
+				<td class="pe">体育</td>
+				<td class="pe">体育</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+			</tr>
+			<!-- 第六课时 -->
+			<tr>
+				<td>6</td>
+				<td class="art">美术</td>
+				<td class="art">美术</td>
+				<td class="art">美术</td>
+				<td class="art">美术</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+			</tr>
+			<!-- 第七课时 -->
+			<tr>
+				<td>7</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+				<td class="chinese">语文</td>
+				<td class="chinese">语文</td>
+				<td class="chinese">语文</td>
+				<td class="math">数学</td>
+			</tr>
+			<!-- 第八课时 -->
+			<tr>
+				<td>8</td>
+				<td class="chinese">语文</td>
+				<td class="chinese">语文</td>
+				<td class="pe">体育</td>
+				<td class="pe">体育</td>
+				<td class="math">数学</td>
+				<td class="math">数学</td>
+			</tr>
+		</tbody>
+		<!-- End tbody -->
+	</table>
+</body>
+</html>

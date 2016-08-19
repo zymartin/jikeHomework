@@ -1,0 +1,136 @@
+//变量
+@jikeCol:#35b558;
+@borderCol:#e4e4e4;
+//定义类
+.mg(@top,@right,@bottom,@left){
+  margin: @arguments;
+}
+.mg(center){
+  margin: 0 auto;
+}
+.mg(t,@px){
+  margin-top: @px;
+}
+.mg(l,@px){
+  margin-left: @px;
+}
+.mg(r,@px){
+  margin-right: @px;
+}
+.mg(b,@px){
+  margin-bottom: @px;
+}
+
+.pd(@top,@right,@bottom,@left){
+  padding: @arguments;
+}
+.pd(t,@px){
+  padding-top: @px;
+}
+.pd(l,@px){
+  padding-left: @px;
+}
+.pd(r,@px){
+  padding-right: @px;
+}
+.pd(b,@px){
+  padding-bottom: @px;
+}
+.border(@px:1px,@col:@borderCol){
+  border: @px solid @col;
+}
+.lineCenter(@h:18px){
+  height: @h;line-height: @h;
+}
+.border-radius(@px:5px){
+  border-radius: @px;
+}
+.text-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.boxShadow(){
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+}
+//匹配
+.pos(r){
+  position: relative;
+}
+.pos(a){
+  position: absolute;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, sans-serif;
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.cf{
+  content: ' ';
+  display: table;
+  clear: both;
+  zoom: 1;
+}
+.wrap:after {
+  .cf
+}
+
+.w-1000 {
+  width: 1000px;
+  .mg(center);
+}
+
+#hot_lessonbox {
+  .mg(t,20px);
+}
+.ofhidden {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.mar-t10 {
+  margin-top: 10px;
+}
+
+.mar-t20 {
+  margin-top: 20px;
+}
+
+.mar-t30 {
+  margin-top: 30px;
+}
+
+.over {
+  height: 100%;
+  width: 100%;
+}
+
+.color_r {
+  color: red;
+}
+.posfix{
+  position: fixed;
+}
+.curpointer{
+  cursor: pointer;
+}

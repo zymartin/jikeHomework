@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高级前端面试题</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style type="text/css">
+	.panel-group .panel-default:nth-child(even) .panel-heading{
+		background-color: lightblue;
+	}
+	h1{margin: 10px 13px 0 13px;border-bottom: 1px solid #efefef;}
+  h2{padding-left: 13px;}
+  code{display: block;}
+  textarea{min-height: 100px;width: 100%}
+	</style>
+</head>
+<body>
+<h1>前端高级面试题</h1>
+<!-- ********************HTML部分******************** -->
+<h2><mark>HTML部分</mark></h2>
+<div class="panel-group" id="accordion_html" role="tablist" aria-multiselectable="true"></div>
+<!-- ********************CSS部分******************** -->
+<h2><mark>CSS部分</mark></h2>
+<div class="panel-group" id="accordion_css" role="tablist" aria-multiselectable="true"></div>
+<!-- ********************JS部分******************** -->
+<h2><mark>JS部分</mark></h2>
+<div class="panel-group" id="accordion_js" role="tablist" aria-multiselectable="true"></div>
+
+<h2><mark>深入Javascript：</mark></h2>
+<div class="panel-group" id="accordion_jsmid" role="tablist" aria-multiselectable="true"></div>
+  
+
+
+
+	<script src="js/jquery-1.11.3.js"></script>
+  <script src="js/bootstrap.js"></script>
+	<script src="js/question.js"></script>
+  <script type="text/javascript">
+    
+
+    
+
+    function addData(obj,dom,name){
+      var htmlstr = '';
+      var name = name.split('_');
+      for(var i = 0; i < obj.length; i++){
+        htmlstr += 
+        '<div class="panel panel-default">'+
+          '<div class="panel-heading" role="tab" id="heading_'+name[1]+i+'">'+
+            '<h4 class="panel-title">'+
+              '<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion_'+name[1]+'" href="#collapse_'+name[1]+i+'" aria-expanded="false" aria-controls="collapse_'+name[1]+i+'">'+
+                obj[i].q+
+              '</a>'+
+            '</h4>'+
+          '</div>'+
+          '<div id="collapse_'+name[1]+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_'+name[1]+i+'">'+
+            '<div class="panel-body">'+
+              obj[i].a+
+            '</div>'+
+          '</div>'+
+        '</div>';
+      }
+      $(dom).html(htmlstr);
+    }
+    addData(question_html,'#accordion_html','accordion_html');
+    addData(question_css,'#accordion_css','accordion_css');
+    addData(question_js,'#accordion_js','accordion_js');
+    addData(question_jsmid,'#accordion_jsmid','accordion_jsmid');
+
+
+
+
+  </script>
+</body>
+</html>

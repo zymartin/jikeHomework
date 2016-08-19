@@ -1,0 +1,84 @@
+	*{box-sizing: border-box;font-size: 12px;}
+	body{background-color: #0d7792;}
+	p, form{
+  		margin: 0;
+  		padding: 0;
+  		list-style: none;
+  		line-height: 18px;
+	}
+	.wrap{width: 639px;margin: 0 auto;}
+	#container{
+		width: 710px;
+		margin: 0 auto;
+		border-radius: 30px;
+		background-color: white;
+		overflow: hidden;
+	}
+	.color_r{color: red;}
+	.color_b{color: blue;}
+	.color_6{color: #666;}
+	
+	/*Start header*/
+	header{height: 82px;}
+	header img{float: left;}
+	header p{
+		float: right;
+		height: 82px;
+		line-height: 12px;
+	}
+	header p a{
+		float: right;
+		font-size: 12px;
+		margin-top: 68px;
+		margin-left: 20px;
+		text-decoration: none;
+		color: red;
+	}
+	/*End header*/
+
+	/*Start table*/
+	#table{border: 1px solid #ccc;border-collapse: collapse;}
+	caption{margin: 10px 0 20px 0; font-size: 18px;font-weight: bold;}
+	.explain p{text-align: center;}
+	.explain a:hover{color: red;}
+	.item{
+		background-color: #eee;
+		font-weight: bold;
+		color: #003399;
+		height: 23px;
+	}
+	.item p{text-align: left;}
+	.subject div input[type='checkbox'],
+	.subject div span{
+		float: left;
+		line-height: 19px;
+	}
+	.subject div span{
+		height: 19px;
+		margin-right: 12px; 
+	}
+	.subject p{
+		clear: both;
+		font-weight: bold;
+		line-height: 30px;
+	}
+	#table tr td:first-child{
+		width: 136px;
+		text-align: right;
+	}
+	#table tr:last-child td{height: 100px;text-align: center;}
+	#table tr:last-child td input{width: 100px;}
+
+	input[name='putonghua'],
+	input[name='putonghua']+span{float: left;}
+
+
+	input[type='text'],
+	input[type='tel'],
+	input[type='email']{width: 243px;}
+	textarea{width: 441px;height: 94px;}
+
+
+
+	/*End table*/
+	footer{text-align: center;margin-bottom: 28px;}

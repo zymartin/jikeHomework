@@ -1,0 +1,1115 @@
+@import "tools.less";
+//header头部
+header {
+    min-height: 70px;
+    padding: 10px 0;
+    border-bottom:2px solid @jikeCol;
+    img{
+        width: 113px;
+        .mg(t,5px);
+    }
+    .w-1000{
+        .pos(r);
+        height: 50px;
+    }
+    .w-1000:after {
+        .cf;
+    }
+    .search_section {
+        .pos(a);
+        .mg(0,0,0,-190px);
+        left: 50%;
+        bottom: 5px;
+        width: 380px;
+        height: 38px;
+        .border();
+    }
+    .search_content {
+        .pd(9px,150px,9px,15px);
+        width: 100%;
+        height: 36px;
+        border: 0;
+        line-height: 18px;
+        color: #333;
+        font-size: 12px;
+    }
+    .hot-words {
+        .pos(a);
+        top: 9px;
+        right: 48px;
+        font-size: 12px;
+        a {
+            padding: 1px 3px;
+            .mg(l,5px);
+            color: gray;
+            background: #f3f3f3;
+        }
+    }
+    .search_btn {
+        .pos(a);
+        top: -1px;
+        right: -1px;
+        width: 40px;
+        height: 38px;
+        .border(1px,#dfdfdf);
+        color: #6d6d6d;
+        background: url(../img/search_btn.png) center center no-repeat;
+    }
+    .login_box {
+        line-height: 50px;
+        em {
+            padding: 0 10px;
+        }
+        a:first-child {
+            background: url(../img/login_msg.gif) left center no-repeat;
+            background-size: 15px 13px;
+            .pd(l,12px);
+        }
+
+    }
+}
+
+/*End header*/
+
+/* start nav */
+
+nav {
+    height: 42px;
+    background: rgba(255, 255, 255, .9);
+    border-bottom: 1px solid #e8e8e8;
+    .boxShadow();
+
+    .tab a {
+        display: inline-block;
+        width: 120px;
+        font-size: 14px;
+        color: #333;
+        line-height: 42px;
+        text-align: center;
+    }
+    .tab a:first-child {
+        text-align: left;
+        width: auto;
+        .mg(r,22px);
+    }
+}
+
+.user_need {
+    i{
+        display: inline-block;
+        vertical-align: middle;
+        width: 20px;
+        height: 15px;
+    }
+    line-height: 42px;
+    a {
+        display: inline-block;
+        .pd(l,20px);
+        .mg(l,20px);
+    }
+    a:first-child i{
+        background: url(../img/vip.png?__spriter) 0 0 no-repeat;
+    }
+    a:nth-child(2) i{
+        background: url(../img/star-icon.png?__spriter) 0 0 no-repeat;
+    }
+    a:last-child i{
+        background: url(../img/dl-icon.png?__spriter) 0 0 no-repeat;
+    }
+}
+
+
+/* End nav */
+
+
+/*section*/
+
+.lesson-l {
+    .pos(r);
+    .fl;
+    .border();
+    width: 210px;
+    border-top: 2px solid @jikeCol;
+    border-right: 0;
+    height: 373px;
+    li>div {
+        width: 208px;
+        .lineCenter(37px);
+        padding: 0 15px;
+        font-size: 13px;
+        color: #333;
+        border-bottom: 1px solid #F5F5F5;
+        background: #fff url(../img/more-icon.png) 186px center no-repeat;
+        background-size: 6px 10px;
+        cursor: pointer;
+        border-right: 1px solid #e4e4e4;
+    }
+}
+
+.lesson_list_detail {
+    .pos(a);
+    display: none;
+    width: 401px;
+    left: 209px;
+    background: #fff;
+    top: 0;
+    z-index: 100;
+    .border();
+    border-left: 0;
+    padding: 0 10px;
+    dl a:hover {
+        color: @jikeCol;
+    }
+    dt {
+        border-bottom: 1px solid #f5f5f5;
+        height: 37px;
+        line-height: 45px;
+    }
+    dd a {
+        .lineCenter(14px);
+        .mg(b,10px);
+        .mg(t,4px);
+        padding: 0 7px;
+        font-size: 12px;
+        border-left: 1px solid #e0e0e0;
+        &:first-child{
+            border-left: 0;
+            .pd(l,0px);
+        }
+    }
+}
+
+/*End section*/
+
+/*swiper*/
+
+.lesson_c {
+    float: left;
+    width: 560px;
+    .mg(l,10px);
+    overflow: hidden;
+}
+
+#swiper_animate {
+    width: 560px;
+    height: 260px;
+    &:hover [class^='arrow']{
+        display: block;
+    }
+    .arrow-right:hover,
+    .arrow-left:hover{
+        background-position: -10px -65px;
+    }
+}
+#pagination {
+    .pos(a);
+    left: 0;
+    text-align: center;
+    bottom: 15px;
+    width: 100%;
+    span {
+        display: inline-block;
+        width: 39px;
+        height: 7px;
+        background: url(../img/s1.jpg) center center no-repeat;
+        margin: 0 6px;
+        cursor: pointer;
+    }
+}
+.on {
+    background: url(../img/s2.jpg) center center no-repeat !important;
+}
+/*normal_wrapper*/
+#header_nomal_s {
+    width: 560px;
+    height: 100px;
+    .mg(t,13px);
+    .border();
+    .pos(r);
+}
+.normal_wrapper {
+    height: 100px;
+    text-align: center;
+    li {
+        width: 186.5px;
+        height: 100px;
+        float: left;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin: 8px auto;
+    }
+}
+#swiper3 {
+    .arrow{
+        .pos(a);
+        z-index: 200;
+        width: 24px;
+        height: 40px;
+        .mg(t,-20px);
+    }
+    .arrow-left {
+        left: 0;
+        background: url(../img/focus-nav.png) 0 0 no-repeat;
+        background-size: 48px 80px;
+        &:hover {
+            background-position: 0 -40px;
+        }
+    }
+    .arrow-right {
+        right: 0;
+        background: url(../img/focus-nav.png) -24px 0 no-repeat;
+        background-size: 48px 80px;
+        &:hover {
+            background-position: -24px -40px;
+        }
+    }
+}
+/*End normal_wrapper*/
+.lesson-r {
+    width: 210px;
+    .border();
+    height: 373px;
+    overflow: hidden;
+    .mg(l,10px);
+}
+.news {
+    padding: 0 13px;
+    height: 125px;
+    border-bottom: 1px solid #E4E4E4;
+    h3 {
+        margin: 10px 0 5px 0;
+        font-size: 14px;
+    }
+    p {
+        .lineCenter(21px);
+    }
+}
+.user_info {
+    height: 86px;
+    border-bottom: 1px solid #E4E4E4;
+    overflow: hidden;
+    .name-wrap {
+        .fl;
+        width: 140px;
+    }
+    .head_box {
+        .fl;
+        width: 64px;
+        .mg(t,10px);
+        img {
+            margin: 0 auto;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .hello_world {
+        .mar-t10;
+    }
+    .operate {
+        .mg(t,7px);
+    }
+
+    .login-btn,
+    .register-btn {
+        display: block;
+        .fl;
+        width: 48px;
+        .lineCenter(20px);
+        color: #FFF;
+        text-align: center;
+    }
+    .login-btn {
+        .mg(r,10px);
+        background: #FB5D20;
+    }
+    .register-btn {
+        background: @jikeCol;
+    }
+}
+.icon {
+    background-image: url(../img/recommend_icon.png);
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin: 13px auto 0;
+    background-size: 71px 232px;
+}
+.recommend_list {
+    li {
+        float: left;
+        display: block;
+        color: #000;
+        width: 52px;
+        height: 76px;
+        line-height: 23px;
+        text-align: center;
+        border-bottom: 1px solid #F5F5F5;
+        border-right: 1px solid #F5F5F5;
+    }
+    li:first-child .icon {
+        background-position: -5px -3px;
+    }
+    li:nth-child(2) .icon {
+        background-position: -5px -31px;
+    }
+    li:nth-child(3) .icon {
+        background-position: -5px -57px;
+    }
+    li:nth-child(4) .icon {
+        background-position: -5px -87px;
+    }
+    li:nth-child(5) .icon {
+        background-position: -5px -117px;
+    }
+    li:nth-child(6) .icon {
+        background-position: -5px -144px;
+    }
+    li:nth-child(7) .icon {
+        background-position: -5px -174px;
+    }
+    li:nth-child(8) .icon {
+        background-position: -5px -202px;
+    }
+    li:nth-child(5):hover .icon {
+        background-position: -42px -117px;
+    }
+    li:nth-child(6):hover .icon {
+        background-position: -42px -144px;
+    }
+    li:nth-child(7):hover .icon {
+        background-position: -42px -174px;
+    }
+    li:nth-child(8):hover .icon {
+        background-position: -42px -202px;
+    }
+    li:nth-child(5):hover a,
+    li:nth-child(6):hover a,
+    li:nth-child(7):hover a,
+    li:nth-child(8):hover a {
+        color: @jikeCol;
+    }
+}
+.angle_bottom {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-top: 6px solid @borderCol;
+    box-sizing: content-box;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    .mg(center);
+}
+/*Start hot_lesson*/
+.hot_lesson ul li {
+    width: 16.6%;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    padding: 10px 0;
+    cursor: pointer;
+}
+.hot_lesson ul {
+    height: 41px;
+    background: url(../img/hotnav_bc.jpg) 0 100% repeat-x;
+}
+.hot_lesson ul li.active {
+    border-bottom: 2px solid @jikeCol;
+    background: url(../img/index-sj.png) center bottom no-repeat;
+    background-size: 10px 4px;
+    color: @jikeCol;
+}
+.hot-lessonbox>div {
+    display: none;
+}
+/*End hot_lesson*/
+/* Start lesson_list */
+.lesson_list  {
+    ul li {
+        .mg(0, 20px, 20px, 0);
+        height: 220px;
+        width: 235px;
+        float: left;
+    }
+    ul {
+        width: 1100px;
+        li:hover .lessonplay {
+            opacity: 1;
+        }
+    }
+    .lessonimg_box {
+        .border();
+        .pos(r);
+        z-index: 1;
+        border-bottom: 0;
+        width: 235px;
+        height: 135px;
+        img {
+            width: 100%;
+            height: 135px;
+        }
+        .lessonplay {
+            background: rgba(0, 0, 0, .4);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            .pos(a);
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+    }
+    .playericon {
+        .pos(a);
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        display: block;
+        left: 50%;
+        .mg(-25px,0,0,-25px);
+        top: 50%;
+        background: url(../img/player_icon.png) 0 0 no-repeat;
+        cursor: pointer;
+        background-size: 50px 50px;
+    }
+}
+.lesson_info {
+    padding: 10px;
+    .border();
+    border-top: 0;
+    height: 88px;
+    overflow: hidden;
+    transition: height .5s;
+    background-color: #fff;
+    .pos(r);
+    z-index: 100;
+    .lesson_info_h2 {
+        .mg(b,12px);
+        a {
+            font-size: 14px;
+        }
+    }
+    p {
+        color: gray;
+        font-size: 12px;
+        line-height: 18px;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all .5s;
+    }
+    .timeandicon {
+        color: gray;
+        position: relative;
+        dl {
+            width: 120px;
+            float: left;
+        }
+    }
+    .time_icon {
+        background: url(../img/clock.png) 0 0 no-repeat;
+        width: 14px;
+        height: 14px;
+        display: block;
+        float: left;
+        .mg(r,8px);
+        background-size: 14px 14px;
+    }
+    .lessonicon-box {
+        .pos(a);
+        right: 0;
+        bottom: 0;
+        text-align: right;
+    }
+    .zhongji {
+        .mg(t,8px);
+    }
+    .zhongji,
+    .learn_number {
+        display: none;
+    }
+    .learn_number {
+        float: right;
+    }
+    .xinhao-icon2 {
+        background: url(../img/tow-ji.png) 0 0 no-repeat;
+        background-size: 14px 14px;
+        width: 14px;
+        height: 14px;
+        display: block;
+        float: left;
+        .mg(r,8px);
+    }
+}
+.lesson_info_hover {
+    height: 175px;
+}
+/* End lesson_list */
+/* Start lessonPathCard */
+.index-public-title {
+    margin-bottom: 16px;
+    strong {
+        font-size: 18px;
+        color: #333;
+        font-weight: 500;
+    }
+    i {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 13px;
+        color: #fff;
+        background: #999;
+        text-align: center;
+        border-radius: 50%;
+        width: 13px;
+        height: 13px;
+        margin: 5px 8px 0;
+        cursor: pointer;
+    }
+    .more-lesson {
+        font-size: 12px;
+        color: #2d85ca;
+        float: right;
+        margin-top: 4px;
+    }
+}
+.learn-card  {
+    a {
+        width: 20%;
+        .border();
+        float: left;
+        text-align: center;
+        display: block;
+        height: 300px;
+        border-right: 0;
+        overflow: hidden;
+        .pos(r);
+        z-index: 1;
+        &:hover button{
+            background-color: @jikeCol;
+            color: #fff;
+        }
+    }
+    a:nth-child(5n) {
+        .border();
+    }
+    a:nth-child(n+6) {
+        border-top: 0;
+    }
+    a img {
+        .mg(b,24px);
+    }
+    a h2 {
+        font-size: 15px;
+        color: #333;
+        .mg(b,20px);
+        height: 18px;
+        overflow: hidden;
+    }
+    a p {
+        font-size: 12px;
+        color: #666;
+        .lineCenter(20px);
+        width: 199px;
+    }
+    a button {
+        width: 140px;
+        .lineCenter(34px);
+        text-align: center;
+        margin-top: 20px;
+        cursor: pointer;
+        outline: 0;
+        color: @jikeCol;
+        font-size: 16px;
+        background: #f3fff6;
+        border: 1px solid @jikeCol;
+    }
+}
+/* End lessonPathCard */
+/* Start transform-card */
+#system {
+    margin-top: 40px;
+}
+.systemBox {
+    width: 1000px;
+    border-right: 1px solid @borderCol;
+    border-bottom: 1px solid @borderCol;
+    overflow: hidden;
+    .systemBox-1200 {
+        width: 1025px;
+    }
+    .card-transform {
+        width: 167px;
+        height: 120px;
+        .border();
+        .fl;
+        border-right: 0;
+        border-bottom: 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .front {
+        border-bottom: 1px solid @borderCol;
+        width: 167px;
+        height: 120px;
+        padding: 15px 0;
+        transform: rotateY(0deg);
+        background-color: #fff;
+        .pos(a);
+        transition: .6s;
+        backface-visibility: hidden;
+        left: 0;
+        top: 0;
+        z-index: 2;
+    }
+    .back {
+        .pd(t,30px);
+        width: 167px;
+        height: 120px;
+        transform: rotateY(-180deg);
+        background-color: #f5f5f5;
+        backface-visibility: hidden;
+        transition: .6s;
+        .pos(a);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+.card-transform:hover .front {
+    transform: rotateY(180deg);
+}
+.card-transform:hover .back {
+    transform: rotateY(0deg);
+}
+.card-transform {
+    .back strong {
+        display: block;
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+    .greenbtn {
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        .border-radius(inherit);
+        width: 140px;
+        height: 36px;
+        cursor: pointer;
+        background: @jikeCol;
+        border: 0;
+    }
+    .font{
+        img {
+            .mg(0px,auto,5px,auto);
+            height: 40px;
+            width: 40px;
+        }
+        span {
+            font-size: 14px;
+            color: @jikeCol;
+        }
+        h2 {
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: #333;
+        }
+    }
+}
+/* End transform-card */
+/* Start 精品系列课程 */
+#excellent {
+    .mg(t,40px);
+}
+.lesson-card {
+    .pos(r);
+    .border();
+    width: 235px;
+    height: 261px;
+    padding: 16px;
+    font-size: 12px;
+    transition: border-color .3s;
+    margin-left: 20px;
+}
+.lesson-card:hover {
+    border-color: @jikeCol;
+}
+.lesson-card:hover .describe {
+    opacity: 1;
+}
+.lesson-card:nth-child(4n+1) {
+    margin-left: 0;
+}
+.lesson-card {
+    .images {
+        overflow: hidden;
+        margin-bottom: 15px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .describe {
+        .pos(a);
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, .9);
+        opacity: 0;
+        top: 0;
+        text-align: center;
+        transition: .3s;
+        .btn {
+            position: absolute;
+            top: 164px;
+            left: 50%;
+            width: 100px;
+            height: 28px;
+            margin-left: -50px;
+            font-size: 14px;
+            line-height: 26px;
+            .border-radius(2px);
+            background: @jikeCol;
+            color: #fff;
+        }
+        .name {
+            margin-top: 4px;
+        }
+    }
+    .picture {
+        .mg(20px,auto,0,auto);
+        width: 50px;
+        height: 50px;
+        .border-radius(50%);
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h2 {
+        .text-ellipsis;
+        width: 80%;
+        .mg(b,15px);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+    }
+    .text {
+        .mg(t,11px);
+        overflow: hidden;
+        width: 100%;
+        height: 40px;
+        padding: 0 16px;
+        text-align: left;
+        line-height: 20px;
+    }
+    .other {
+        .pos(r);
+        z-index: 20;
+        color: gray;
+        line-height: 18px;
+        span {
+            margin-right: 6px;
+        }
+    }
+}
+.collect {
+    width: 56px;
+    height: 20px;
+    text-align: center;
+    .mg(r,6px);
+    .border-radius(2px);
+    background-color: @jikeCol;
+    color: #fff;
+    cursor: pointer;
+}
+/* End 精品系列课程 */
+/*Start Wiki*/
+#wiki {
+    .mg(t,40px);
+}
+.one-wiki {
+    .border();
+    .fl;
+    width: 333.3px;
+    height: 370px;
+    padding: 15px;
+    h2 {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    dd{
+        text-align: center;
+        width: 142px;
+    }
+    dd:nth-child(1) {
+        .mg(r,15px);
+    }
+    dd .imgbox {
+        .pos(r);
+        .border-radius();
+        width: 142px;
+        height: 200px;
+        background: #999;
+    }
+    dd .imgbox img.fengmian {
+        .border-radius();
+        width: 142px;
+        height: 200px;
+        transform-origin: 0 0 0;
+        transition: 1s ease;
+    }
+    dd .imgbox img.fengmian:hover{
+        transform: rotateY(20deg);
+    }
+    dd h3 {
+        .text-ellipsis;
+        .lineCenter(13px);
+        font-size: 13px;
+        color: #333;
+        margin: 10px auto;
+    }
+    dd span {
+        font-size: 12px;
+        color: #999;
+    }
+    li {
+        color: #999;
+        line-height: 12px;
+        .mg(b,8px);
+        display: block;
+    }
+    li a{
+        color: #999;
+    }
+    li:after{
+        .cf;
+    }
+    li p{
+        .text-ellipsis;
+        width: 200px;
+        display: block;
+        .fl;
+    }
+    li span{
+        .fr;
+    }
+}
+/*End Wiki*/
+/*Start enterprise*/
+#qiye,
+#university,
+#enterprise{margin-top: 40px;}
+.strategy {
+    .border();
+    .pos(r);
+    height: 90px;
+    padding: 20px;
+}
+.strategybox{
+    .pos(r);
+    overflow: hidden;
+    .swiper-container{
+        width: 10000px;
+        .pos(a);
+    }
+}
+.swiper-container{
+    li{
+        font-size: 0;
+        float: left;text-align: center;
+    }
+    a{
+        font-size: 0;
+        text-align: center;
+    }
+}
+/*.swiper-container{position: absolute;left: 0;}*/
+#enterprise .swiper-container img {
+    height: 50px;
+    width: 150px;
+    .border();
+}
+.arrow-left{
+    background: url(../img/banner-left.png) -10px -5px no-repeat;
+}
+.arrow-right{
+    background: url(../img/banner-right.png) -10px -5px no-repeat;
+}
+.arrow-left,
+.arrow-right{
+    .pos(a);
+    .mg(t,-25px);
+    top: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 50px;
+    z-index: 5;
+    display: none;
+}
+.arrow-right{right: 0;}
+#university:hover [class^='arrow'],
+#enterprise:hover [class^='arrow'],
+#swiper3:hover [class^='arrow'],
+#qiye:hover [class^='arrow']{
+    display: block;
+}
+#university .arrow-left:hover,
+#university .arrow-right:hover,
+#qiye .arrow-left:hover,
+#qiye .arrow-right:hover,
+#enterprise .arrow-left:hover,
+#enterprise .arrow-right:hover{
+    background-position: -10px -65px;
+}
+/*End enterprise*/
+/*Start university*/
+#university .strategy{
+    height: 150px;
+}
+#university a img{
+    width: 110px;
+    height: 110px;
+}
+/*End university*/
+/*End section*/
+/* footer */
+footer{
+    .mg(t,50px);
+    background: #fafafa;
+    border-top: 1px solid @borderCol;
+    border-bottom: 1px solid @borderCol;
+    .w-1000>div{
+        width: 185px;
+        .pd(l,30px);
+        color: gray;
+        margin: 25px 0;
+        float: left;
+        border-left: 1px solid @borderCol;
+        min-height: 175px;
+    }
+    .w-1000 .share{
+        width: 260px;
+        float: left;
+        min-height: 226px;
+        border-left: 1px solid @borderCol;
+        .pd(20px,0,0,40px);
+        margin: 0;
+    }
+    .col li{
+        font-size: 12px;
+        .mg(t,10px);
+    }
+    .col li:first-child{
+        .mg(t,0);
+    }
+    .col li a {
+        color: gray;
+        .pd(l,5px);
+    }
+    .col li:first-child a{
+        font-size: 14px;
+    }
+}
+.jktxt{
+    font-size: 15px;
+    color: @jikeCol;
+    display: block;
+    .mg(b,15px);
+    font-weight: 500;
+}
+.app:hover a,
+.app:hover p{color: @jikeCol}
+.app {
+    img {
+        width: 21px;
+        .mg(r,15px);
+    }
+    p{
+        font-size: 14px;
+        color: gray;
+        background: url(../img/more-icon.png) 160px no-repeat;
+        background-size: 7px 13px;
+    }
+    strong{
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+.myshare{
+    .mg(t,15px);
+    a{
+        background: url(../img/icon.png) -23px 0 no-repeat;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        .mg(r,10px);
+        .pos(r);
+    }
+    a:first-child:hover{
+        background-position: -23px -40px;
+    }
+    a:nth-child(2){
+        background-position: -145px 0;
+    }
+    a:nth-child(2):hover{
+        background-position: -145px -40px;
+    }
+    a:nth-child(3){
+        background-position: -23px -82px;
+    }
+    a:nth-child(3):hover{
+        background-position: -23px -122px;
+    }
+}
+.kefu{
+    .mg(t,15px);
+    div {
+        width: 40px;
+        height: 40px;
+        background: url(../img/kefu.png) no-repeat;
+        background-size: 80px 40px;
+        .mg(r, 5px);
+    }
+    h5{color: #666;font-size: 15px;margin-bottom: 2px}
+    p{color: gray}
+}
+/*End footer*/
+/*fixed定位框*/
+.toTop,.tip{
+    text-align: center;
+    color: #333;
+    width: 60px;
+    padding: 3px;
+    &:hover{
+        background-color: @borderCol;
+        color: #fff;
+    }
+}
+.toTop{
+    padding: 0;
+    .border();
+    .lineCenter(60px);
+    bottom: 50px;
+    right: 30px;
+    height: 60px;
+
+}
+.tip{
+    .border();
+    bottom: 150px;
+    right: 30px;
+    height: 100px;
+}
