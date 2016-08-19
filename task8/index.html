@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<title>百度新闻</title>
+</head>
+<body>
+<!--头部蓝色区域-->
+	<div id="header">
+		<div class="toolbar cf">
+			<div class="fl">
+				<a class="btn_bd" href="#"></a>
+				<a class="bd_user" href="#"></a>
+			</div>
+			<div class="fr">
+				<a class="btn_search" href="#"></a>
+				<a class="more" href="#"></a>
+			</div>
+		</div>
+		<div class="news_navigator">
+			<div class="content">
+				<!-- 栏目表-->
+				<table>
+					<tbody>
+					<tr>
+						<td data-type="newsTuijian"><b></b><a href="#">推荐</a></td>
+						<td data-type="newsBaijia"><b></b><a href="#">百家</a></td>
+						<td data-type="newsBendi"><b></b><a href="#">本地</a></td>
+						<td data-type="newsTupian"><b></b><a href="#">图片</a></td>
+						<td data-type="newsYule"><b></b><a href="#">娱乐</a></td>
+						<td data-type="newsShehui"><b></b><a href="#">社会</a></td>
+					</tr>
+					<tr>
+						<td data-type="newsJunshi"><b></b><a href="#">军事</a></td>
+						<td data-type="newsNvren"><b></b><a href="#">女人</a></td>
+						<td data-type="newsGaoxiao"><b></b><a href="#">搞笑</a></td>
+						<td data-type="newsKeji"><b></b><a href="#">科技</a></td>
+						<td colspan="2"><b></b><a href="#">更多</a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<!--End 头部蓝色区域-->
+	<div id="article">
+		<div class="swiperPic">
+			<div class="picCtn ofh">
+				<ul class="cf">
+					<!--<li><a href="#"><img src="img/timg1.jpg" alt=""/></a>
+						<p>这是标题这是标题这是标题这是标题这是标题</p>
+					</li>
+					<li><a href="#"><img src="img/timg2.jpg" alt=""/></a>
+						<p>这是标题这是标题这是标题这是标题这是标题</p>
+					</li>-->
+				</ul>
+			</div>
+		</div>
+		<div class="news_item">
+			<!--<div class="item">
+				<img class="fl" src="img/news1.jpg" alt=""/>
+				<div class="news_title">
+					习近平同普京举行会谈：深化中俄全面战略协作伙伴关系
+				</div>
+				<div class="news_time">
+					<span class="tip_time fl">1天前</span>
+					<span class="tip_type fr">置顶</span>
+				</div>
+			</div>
+			<div class="item">
+				<img class="fl" src="img/news2.jpg" alt=""/>
+				<div class="news_title">
+					数百万英国人请求重新公投 专家称可能性不大
+				</div>
+				<div class="news_time">
+					<span class="tip_time fl">1分钟前</span>
+					<span class="tip_type fr">网易要闻</span>
+				</div>
+			</div>
+			<div class="item">
+				<img class="fl" src="img/news3.jpg" alt=""/>
+				<div class="news_title">
+					十年老友！白百何唱歌祝福文章大受感动
+				</div>
+				<div class="news_time">
+					<span class="tip_time fl">1分钟前</span>
+				</div>
+			</div>
+			<div class="item">
+				<img class="fl" src="img/news4.jpg" alt=""/>
+				<div class="news_title">
+					你绝对想不到，麻省理工是这么看百度小米的
+				</div>
+				<div class="news_time">
+					<span class="tip_time fl">5分钟前</span>
+				</div>
+			</div>-->
+
+		</div>
+	</div>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		//页面的数据承载
+		var pageData,t;
+
+		function swiper(){
+			var ctn = $('.picCtn ul');
+			var cloneLi = $('.picCtn li').eq(0).clone();
+			var distance = $('.picCtn').width();
+
+			ctn.append(cloneLi);
+			var num = $('.picCtn li').length;
+			var index = 0;
+
+			//布局数据初始化
+
+			ctn.width(distance*num);
+			$('.swiperPic li').width(distance);
+
+			//动画
+			var go = function(){
+				index--;
+				if(index<=-num){
+					//到达最后一张,回到第一张
+					index = -1;
+					ctn.css('margin-left',0);
+					ctn.animate({'margin-left':index*distance},1000);
+				}else{
+					ctn.animate({'margin-left':index*distance},1000);
+				}
+			}
+			t = setInterval(go,3000);
+		};
+//		swiper();
+
+
+
+		function getTabData(res){
+			var res = res||'newsTuijian';
+			$.ajax({
+				url:'php/getData.php',
+				type:'POST',
+				async:false,
+				data:{table:res},
+				success:function(data){
+					pageData = data;
+					console.log(pageData);
+				},
+				error:function(){}
+			})
+		};
+		$('.content td').on('click',function(){
+			//点击时访问mysql取出数据
+			$('.picCtn ul').html('');
+			clearInterval(t);
+			getTabData(this.dataset.type);
+			var htmlstr = '';
+
+			for(var i = 0; i < pageData.length; i++){
+//				console.log(pageData[i].swiper);
+				if(pageData[i].swiper == undefined){
+					htmlstr +=
+						'<div class="item">'+
+						'<img class="fl" src="'+pageData[i].newsImg+'" alt=""/>'+
+						'<div class="news_title">'+
+						pageData[i].newsTitle+
+						'</div>'+
+						'<div class="news_time">'+
+						'<span class="tip_time fl">'+pageData[i].newsTime+'</span>';
+						if(pageData[i].newsType != 'no'){
+							htmlstr += '<span class="tip_type fr">'+pageData[i].newsType+'</span>'
+						}
+					htmlstr += '</div></div>';
+				}else{
+					var htmlstrSwiper = '';
+					for(var k = 0; k < pageData[i].swiper.length; k++){
+						htmlstrSwiper +=
+
+						'<li><a href="#"><img src="'+pageData[i].swiper[k].newsImg+'" alt=""/></a>'+
+						'<p>'+pageData[i].swiper[k].newsText+'</p>'+
+						'</li>'
+					}
+					$('.picCtn ul').html(htmlstrSwiper);
+					swiper();
+				};
+
+			}
+			$('.news_item').html(htmlstr);
+		});
+		$('.content td')[0].click();
+
+	</script>
+</body>
+</html>

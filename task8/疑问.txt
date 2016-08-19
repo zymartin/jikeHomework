@@ -1,0 +1,117 @@
+************PHP疑问：
+#为什么要手写关闭连接的mysql_close()？不是执行成功会自动关闭吗，网上是这样说的啊？
+
+
+DROP DATABASE IF EXISTS jikezy;
+
+CREATE DATABASE jikezy CHARSET=UTF8;
+
+USE jikezy;
+
+DROP TABLE IF EXISTS newsSwiperPicTuijian;
+DROP TABLE IF EXISTS newsTuijian;
+DROP TABLE IF EXISTS newsBaijia;
+DROP TABLE IF EXISTS newsBendi;
+
+
+CREATE TABLE newsSwiperPicTuijian(
+    newsNo INT PRIMARY KEY AUTO_INCREMENT,
+    newsText TEXT,
+    newsImg VARCHAR(100)
+);
+CREATE TABLE newsTuijian(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsBaijia(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsBendi(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsTupian(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsYule(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsShehui(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsJunshi(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsNvren(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsGaoxiao(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+CREATE TABLE newsKeji(
+	newsNo INT PRIMARY KEY AUTO_INCREMENT,
+	newsTitle TEXT,
+	newsImg VARCHAR(100),
+	newsTime VARCHAR(30),
+	newsType VARCHAR(30)
+);
+
+INSERT INTO newsTuijian(newsNo,newsTitle,newsImg,newsTime,newsType)
+	  VALUES(NULL,'习近平同普京举行会谈：深化中俄全面战略协作伙伴关系','img/news1.jpg','2016-3-26','置顶'),         (NULL,'数百万英国人请求重新公投 专家称可能性不大','img/news2.jpg','2016-3-26','网易要闻'),
+	  (NULL,'十年老友！白百何唱歌祝福文章大受感动','img/news3.jpg','2016-3-26','no'),
+	  (NULL,'你绝对想不到，麻省理工是这么看百度小米的','img/news4.jpg','2016-3-26','no');
+
+
+INSERT INTO newsBaijia(newsNo,newsTitle,newsImg,newsTime,newsType)
+	  VALUES(NULL,'华生的两难及“独懂”制度对上市公司决策的扭曲','img/newsbaijia1.jpg','2016-3-26','华生'),         (NULL,'苹果的差分隐私对你的数据意味着什么？','img/newsbaijia2.jpg','2016-3-26','IOS'),
+	  (NULL,'外国人看中国移动端营销：本土化是必修课','img/newsbaijia3.jpg','2016-3-26','大数据'),
+	  (NULL,'麦当劳中国业务竞标半路杀出个三胞集团','img/newsbaijia4.jpg','2016-3-26','麦当劳');
+
+INSERT INTO newsBendi(newsNo,newsTitle,newsImg,newsTime,newsType)
+	  VALUES(NULL,'张秉贵：心中“一团火”，温暖万人心','img/newsbendi1.jpg','2016-3-26','no'),            (NULL,'郭声琨：凝聚全社会力量综合治理毒品问题 坚定不移久久为功打赢禁毒人民战争','img/newsbendi2.jpg','2016-3-26','毒品'),
+	  (NULL,'斯杯11年后重回北京 男篮双星选秀后国内首秀','img/newsbendi3.jpg','2016-3-26','中国男篮'),
+	  (NULL,'北京丰台举办“生态文明 绿色消费”主题活动','img/newsbendi4.jpg','2016-3-26','no');
+
+INSERT INTO newsSwiperPicTuijian(newsNo,newsText,newsImg)
+       VALUES(NULL,'这是标题这是标题这是标题','img/timg1.jpg'),
+       (NULL,'这是标题这是标题这是标题','img/timg2.jpg');
+
+
+SELECT newsNo,newsTitle,newsImg,newsTime,newsType FROM newsTuijian;
+SELECT newsNo,newsTitle,newsImg,newsTime,newsType FROM newsBaijia;
+SELECT newsNo,newsTitle,newsImg,newsTime,newsType FROM newsBendi;
+SELECT newsNo,newsText,newsImg FROM newsSwiperPicTuijian;
